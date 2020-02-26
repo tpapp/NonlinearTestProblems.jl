@@ -12,7 +12,7 @@ const SQUARE_PROBLEMS = [F_NWp281(), Rosenbrock(), PowellSingular(), PowellBadly
         @test sum(abs2, f(x0)) ≤ eps()
 
         x1 = starting_point(f)
-        @test length(x1) == length(x)
+        @test length(x1) == domain_dimension(f)
         @test sum(abs2, f(x1)) > eps()
 
         @test starting_point(f, 0) ≈ x1
