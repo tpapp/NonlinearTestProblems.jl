@@ -65,7 +65,7 @@ difficult (eg move away further from the root).
 function starting_point end
 
 function starting_point(problem, α::Real)
-    @argcheck x ≥ 0
+    @argcheck α ≥ 0
     x0 = root(problem)
     x1 = starting_point(problem)
     @. x0 + (1 + α) * (x1 - x0)
