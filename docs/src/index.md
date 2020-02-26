@@ -32,3 +32,13 @@ Contributions are welcome in the form of pull requests.
 3. Always cite sources (see the `CITATIONS.bib` in the source).
 
 4. Feature requests and suggestions are welcome.
+
+## Test problems
+
+```@docs
+F_NWp281
+Rosenbrock
+PowellSingular
+PowellBadlyScaled
+HelicalValley
+```
