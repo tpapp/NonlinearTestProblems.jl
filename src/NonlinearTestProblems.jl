@@ -17,7 +17,7 @@ using DocStringExtensions: FUNCTIONNAME, SIGNATURES
 ####
 
 """
-`$(FUNCTIONNAME)`(problem)
+`$(FUNCTIONNAME)(problem)`
 
 Dimension `n` of a the domain of a ``ℝⁿ → ℝᵐ`` test problem.
 """
@@ -35,7 +35,7 @@ Dimension `m` of a the range of a ``ℝⁿ → ℝᵐ`` test problem.
 range_dimension(problem) = domain_dimension(problem)
 
 """
-`$(FUNCTIONNAME)`(problem)
+`$(FUNCTIONNAME)(problem)`
 
 Root (solution) of a test problem. Formally,
 
@@ -48,9 +48,9 @@ Problems are guaranteed to have a unique root.
 function root end
 
 """
-`$(FUNCTIONNAME)`(problem)
+`$(FUNCTIONNAME)(problem)`
 
-`$(FUNCTIONNAME)`(problem, α)
+`$(FUNCTIONNAME)(problem, α)`
 
 Recommended starting point of a test problem for methods that need one (eg quasi-Newton).
 Usually taken from the literature that defines a problem, and should be “difficult”.

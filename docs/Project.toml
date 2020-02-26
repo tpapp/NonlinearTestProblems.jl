@@ -1,0 +1,6 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+NonlinearTestProblems = "84d880b8-0062-4738-ba75-b6cb1662e554"
+
+[compat]
+Documenter = "~0.24"
