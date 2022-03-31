@@ -4,7 +4,7 @@ module NonlinearTestProblems
 export domain_dimension, range_dimension, root, starting_point, lower_bounds, upper_bounds
 
 # export problems
-export F_NWp281, Rosenbrock, PowellSingular, PowellBadlyScaled, HelicalValley
+export F_NWp281, Rosenbrock, PowellSingular, PowellBadlyScaled, HelicalValley, Beale
 
 using ArgCheck: @argcheck
 using DocStringExtensions: FUNCTIONNAME, SIGNATURES
@@ -181,6 +181,25 @@ function (::HelicalValley)(x)
     x1, x2, x3 = x
     θ = 1/(2π) * atan(x2 / x1) + ifelse(x1 < 0, 0.5, 0)
     [10*(x3 - 10 * θ), 10 * (hypot(x1, x2) - 1), x3]
+end
+
+###
+### Beale function
+###
+
+"Beale function. (5) from Moré et al (1981)."
+struct Beale end
+
+domain_dimension(::Beale) = 2
+
+range_dimension(::Beale) = 3
+
+root(::Beale) = [3, 0.5]
+
+starting_point(::Beale) = [1, 1]
+
+function (::Beale)(x)
+    [1.5, 2.25, 2.625] .- x[1] .* (1 .- x[2] .^ (1:3))
 end
 
 end # module
